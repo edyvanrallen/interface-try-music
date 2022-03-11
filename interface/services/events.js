@@ -3,7 +3,7 @@ function createEvents() {
     let url = "http://localhost:8080";
 
     let token = localStorage.getItem('token')
-       
+
     let type = document.getElementById("selection").value;
     let name = document.getElementById("nameEv").value;
     let date = document.getElementById("dateEv").value;
@@ -30,7 +30,7 @@ function createEvents() {
         });
 }
 
-function getEvents(){
+function getEvents() {
 
     let band_id = sessionStorage.getItem('band_id')
 
@@ -39,20 +39,18 @@ function getEvents(){
     }
 
     axios.post(url + '/eventsget', data)
-    .then(response => {
-        let events = response.data
+        .then(response => {
+            let events = response.data
 
-        console.log(events)
+            console.log(events)
 
-        let section = window.document.getElementById('cardsEvents')
+            let section = window.document.getElementById('cardsEvents')
 
-        for (let count in events) {
-            let showEvents = document.createElement('div')
-            showEvents.setAttribute('class', 'bottom-block')
-            showEvents.setAttribute('id', count)
-            showEvents.innerHTML = `
-                <div class="limit"></div>
-                <div class="limit"></div>
+            for (let count in events) {
+                let showEvents = document.createElement('div')
+                showEvents.setAttribute('class', 'bottom-block')
+                showEvents.setAttribute('id', count)
+                showEvents.innerHTML = `
                 <div class="content first-bottom-block">
                     <h1 class="title-fdb">${events[count]['tipo']}</h1>
                     <h2>${events[count]['name']}</h2>
@@ -62,16 +60,13 @@ function getEvents(){
                     <button onclick="showModall()" class="button-cards-one" href="../js/popup-cards.js"><i
                             class="fa fa-pencil"></i> Edit</button>
                 </div>
-                <div class="limit"></div>
-                <div class="limit"></div>
             `
 
-            section.append(showEvents)
-        }
-    }).catch(error => {
-        alert(JSON.stringify(error.response.data));
-    })
+                section.append(showEvents)
+            }
+        }).catch(error => {
+            alert(JSON.stringify(error.response.data));
+        })
 }
 
 getEvents()
-
