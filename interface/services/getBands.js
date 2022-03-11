@@ -17,6 +17,7 @@ function createBand() {
             window.location.href = "bands.html"
         })
         .catch(error => alert(JSON.stringify(error.response.body)))
+        
 }
 
 
@@ -44,7 +45,7 @@ function getBands() {
                 ShowBands.setAttribute('class', 'band')
                 ShowBands.setAttribute('id', count)
                 ShowBands.innerHTML = `
-            <button class="click-band">
+            <button class="click-band" onclick="direcionamural(${bands[count]['Band']['id']})">
             <label id="ShowBandName" for="">${bands[count]['Band']['name']}</label>
                 </button>
             <br><img src="../_imagens/concerto.jpg" alt="">
@@ -67,4 +68,4 @@ function deleteBand() {
 
 }
 
-window.onload(getBands())
+getBands()

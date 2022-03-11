@@ -107,7 +107,8 @@ div h1.titulo-principal {
 }
 
 div.bottom-block {
-    display: flex;
+    margin: 7px;
+    display: inline-table;
     justify-content: space-between;
     overflow-x: scroll;
     height: 251px;

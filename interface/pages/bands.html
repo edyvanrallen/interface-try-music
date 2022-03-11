@@ -12,8 +12,9 @@
     <script src="https://kit.fontawesome.com/25cbd42782.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../services/getBands.js"></script>
-
-    <body onload="getBandas()">
+    <script src="../services/createBands.js"></script>
+    <script src="../services/direcionamural.js"></script>
+    <body>
         <header>
             <nav>
                 <a class="logo" href="#"><i class="fab fa-connectdevelop"></i>
@@ -24,7 +25,6 @@
                 </ul>
             </nav>
         </header>
-        <script src="../services/createBands.js"></script>
         <button class="butto" onclick="showModal()">Create</button>
         <a href="join-to-band.html"><button class="butto">Join</button></a>
         <br>
@@ -91,9 +91,9 @@
                 </span>
                 <br><br>
                 <label class="txt" for="">Band name*</label><br>
-                <input class="username" name="name" placeholder="Name" type="text">
+                <input id="bandName" class="username" name="name" placeholder="Name" type="text">
                 <br><br>
-                <input type="submit" value="Create" id="btn">
+                <input type="submit" value="Create" id="btn" onclick="createBand()">
             </div>
         </div>
         <script src="../js/modal-del.js"></script>
