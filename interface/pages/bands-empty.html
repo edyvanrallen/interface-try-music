@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <link rel="shortcut icon" type="imagex/png" href="../_imagens/connectdevelop.png">
+    <link rel="stylesheet" href="../css/bands-empty-screen.css">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://kit.fontawesome.com/25cbd42782.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../services/createBands.js"></script>
+    <title>My Bands</title>
+
+    <body>
+        <header>
+            <nav>
+                <a class="logo" href="#"><i class="fab fa-connectdevelop"></i>
+                trymusic
+            </a>
+                <ul class="nav-list">
+                    <li class="a"><i class="far fa-user-circle" href="../js/popup.js"></i></li>
+                </ul>
+            </nav>
+        </header>
+        <img src="../_imagens/compose_music.png" alt="">
+        <label for="" class="empty">Add a band to get started</label>
+        <div class="buttons">
+            <button onclick="showModal()">Create</button>
+            <a href="./join-to-band.html"><button>Join</button></a>
+        </div>
+
+        <!--div para inserir nome da banda-->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <!--span (button de cancelar)-->
+                <span class="close-button" id="close-button" onclick="closeModal()">
+                Cancel
+            </span>
+                <br><br>
+                <label class="txt" for="">Band name*</label><br>
+                <input class="username" name="name" id="bandName" placeholder="Name" type="text">
+                <br><br>
+                <input type="submit" value="Create" id="btn" onclick="createBand()">
+            </div>
+        </div>
+
+        <div id="popup-wrapper" class="popup-wrapper">
+            <div class="popup">
+                <div class="circle">
+                    <label for="" class="init-letter">E</label>
+                </div>
+                <label for="" class="name">Edy Vanrallen</label>
+                <br>
+                <lable class="email">example@gmail.com</lable>
+                <br>
+                <div class="trace"></div>
+                <button class="logout">Log out of account</button>
+            </div>
+        </div>
+
+
+        <script src="../js/modal.js"></script>
+        <script src="../js/popup.js"></script>
+    </body>
+
+</html>

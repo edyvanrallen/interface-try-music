@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2? family = Josefin + Sans: wght @ 100; 300; 600 & family = Aberto + Sans: wght @ 300; 400; 700 & family = Titillium + Web: wght @ 200 & display = swap ');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background: rgb(37, 36, 36);
+    height: 8vh;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.title {
+    font-size: xx-large;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.fa-connectdevelop::before {
+    color: #F4511E;
+}
+
+button {
+    background-color: #F4511E;
+    color: #fff;
+    position: relative;
+    width: 150px;
+    padding: 5px;
+    max-width: 150px;
+    min-width: 100px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: 0.5px solid #FFFFFF;
+    margin: 5px;
+}
+
+.buttons {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    width: 325px;
+    transform: translate(-50%, -50%);
+}
+
+.band {
+    background-color: #323232;
+    color: white;
+    position: relative;
+    top: 40px;
+    left: 15px;
+    right: 15px;
+    width: 23%;
+    max-width: 312px;
+    min-width: 210px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+label {
+    position: absolute;
+    top: 7%;
+    left: 5%;
+}
+
+.empty {
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+}
+
+.icon {
+    position: relative;
+    top: -20px;
+    left: -20px;
+    transform: rotate(-45deg);
+    width: 40px;
+    height: 40px;
+}
+
+.fa-user-circle:before {
+    color: #F4511E;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+/*modal de sobreposição*/
+
+.modal {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0.25s ease-in-out, opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #363636;
+    padding: 65px 70px;
+    width: 400px;
+    border-radius: 0.5rem;
+}
+
+
+/*button cancelar*/
+
+.close-button {
+    position: absolute;
+    color: #F4511E;
+    right: 42%;
+    top: 87%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 24px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    opacity: 0.7;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+}
+
+
+/*button de criar*/
+
+#btn {
+    position: absolute;
+    right: 6.2%;
+    top: 80%;
+    color: #FFFFFF;
+    background: #F4511E;
+    border: 0.5px solid #FFFFFF;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+/*estilo nome da banda*/
+
+.txt {
+    color: #FFFFFF;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+
+/*estilo da caixa de texto de criar bandas*/
+
+.username {
+    position: absolute;
+    width: 350px;
+    height: 10px;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+
+/*tela de usuario*/
+
+.popup-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup {
+    text-align: center;
+    width: 260px;
+    height: 300px;
+    max-width: 260px;
+    top: 40px;
+    right: 10px;
+    border-radius: 10px;
+    background: #363636;
+    position: absolute;
+}
+
+.close-popup {
+    color: #F4511E;
+    cursor: pointer;
+    top: 5px;
+    right: 10px;
+    position: absolute;
+}
+
+.circle {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 3px solid #323232;
+    background-color: #F4511E;
+}
+
+.init-letter {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 60px;
+    color: #fff;
+}
+
+.name {
+    position: absolute;
+    color: white;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    font-size: 20px;
+}
+
+.email {
+    position: absolute;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%;
+    font-size: 15px;
+}
+
+.trace {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
+    height: .3px;
+    width: 200px;
+    background-color: #fff;
+}
+
+.logout {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 244px;
+    left: 125px;
+    width: 150px;
+    height: 30px;
+    background-color: #363636;
+    border-radius: 15px;
+    font-size: 15px;
+    color: #fff;
+    border: 0.5px solid #FFFFFF;
+    margin: 5px;
+}
+
+.logout:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}

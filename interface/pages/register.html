@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="imagex/png" href="../_imagens/connectdevelop.png">
+    <link rel="stylesheet" href="../css/registration-screen.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/25cbd42782.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Register</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../services/resgister.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="../../index.html"><i class="fab fa-connectdevelop"></i> TryMusic</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="login-page.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <img src="../_imagens/claveSol.png" alt="">
+        </div>
+        <div class="container">
+            <script src="../js/resgister.js"></script>
+            <form action="" onsubmit="registerUser()" >
+                <div id="stilo">
+                    <label for="username" id="txt">Name*</label><br>
+
+                    <input id="username" name="name" placeholder="Name" type="text">
+                    <i class="fa fa-user"></i>
+
+                    <br>
+                    <label for="email" id="txt">Email*</label><br>
+
+                    <input id="email" name="email" placeholder="example@gmail.com" type="email">
+                    <i class="fa fa-envelope icon"></i>
+
+                    <br>
+                    <label for="senha" id="txt">Password*</label><br>
+
+                    <input id="password" name="password" placeholder="***************" type="password">
+                    <i class="fa fa-lock icon fa-lg"></i>
+
+                    <br>
+                    <label for="senha" id="txt">Confirm password*</label><br>
+
+                    <input id="password2" name="password" placeholder="***************" type="password">
+                    <i class="fa fa-lock icon fa-lg"></i>
+                    <br><br>
+                    <div id="btn">
+                        <input type="submit" value="Register" id="btn">
+                        </input>
+                    </div>
+                    <br>
+                    <label for="newUser" id="subs">Already have an account?</label>
+                    <a class='log' href="login-page.html">Login</a>
+                </div>
+            </form>
+        </div>
+
+        <script src="../js/mobile-navbar.js"></script>
+
+    </main>
+</body>
+
+</html>

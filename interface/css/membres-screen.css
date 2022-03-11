@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2? family = Josefin + Sans: wght @ 100; 300; 600 & family = Aberto + Sans: wght @ 300; 400; 700 & family = Titillium + Web: wght @ 200 & display = swap ');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*cor de fundo da pagina*/
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: #000000;
+    overflow-x: hidden;
+}
+
+.title {
+    font-size: xx-large;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background: rgb(37, 36, 36);
+    height: 8vh;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.fa-connectdevelop::before {
+    color: #F4511E;
+}
+
+.fa-xmark::before {
+    color: #FFFFFF;
+}
+
+.fa-user-circle::before {
+    color: #F4511E;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-user-plus::before {
+    color: #FFFFFF;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.fa-user-plus::before {
+    position: absolute;
+    top: 315px;
+    right: 20%;
+}
+
+.fa-trash::before {
+    color: #FFFFFF;
+    font-size: 25px;
+    position: absolute;
+    top: 365px;
+    right: 21%;
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media(max-width:999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        height: 92vh;
+        width: 35vw;
+        background: #212121;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        z-index: 1;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+#txt {
+    position: absolute;
+    width: 225px;
+    height: 49px;
+    left: 22%;
+    top: 100px;
+    font-size: 40px;
+    line-height: 59px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+}
+
+#txt2 {
+    position: absolute;
+    width: 225px;
+    height: 49px;
+    left: 22%;
+    top: 300px;
+    font-size: 40px;
+    line-height: 59px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+}
+
+.trace {
+    background: #FFFFFF;
+    position: absolute;
+    width: 60%;
+    height: 1px;
+    right: 20%;
+    top: 150px;
+}
+
+.trace2 {
+    background: #FFFFFF;
+    position: absolute;
+    width: 60%;
+    height: 1px;
+    right: 20%;
+    top: 350px;
+}
+
+#check {
+    position: absolute;
+    top: 30px;
+    right: 1%;
+}
+
+#text {
+    position: absolute;
+    width: 225px;
+    height: 49px;
+    left: 40%;
+    top: 5px;
+    font-size: 25px;
+    line-height: 59px;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+}
+
+#text2 {
+    position: absolute;
+    width: 225px;
+    height: 49px;
+    left: 12%;
+    top: 5px;
+    font-size: 25px;
+    line-height: 59px;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+}
+
+.leader {
+    position: absolute;
+    width: 225px;
+    height: px;
+    background: #000000;
+    left: 20%;
+    top: 166px;
+}
+
+.circle {
+    position: absolute;
+    background-color: #aaa;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    top: 32%;
+    left: 0;
+    overflow: hidden;
+}
+
+.circle img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.membres {
+    position: absolute;
+    width: 740px;
+    background: #000000;
+    left: 20%;
+    top: 400px;
+}

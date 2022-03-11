@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/login-screen.css">
+    <link rel="shortcut icon" type="imagex/png" href="../_imagens/connectdevelop.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/25cbd42782.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Login</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="../../index.html"><i class="fab fa-connectdevelop"></i>
+                trymusic
+            </a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img src="../_imagens/minima.png" alt="">
+        <div class="container">
+            <script src="../services/login.js"></script>
+            <form onsubmit="login()">
+                <div>
+                    <label class="title" for="title">Login</label>
+                    <br><br><br><br>
+                    <label for="email" id="txt">Email*</label><br>
+
+
+                    <input type="text" id="email" placeholder="example@gmail.com">
+                    <i class="fa fa-envelope"></i>
+
+
+                    <br><br>
+                    <label for="password" id="txt">Password*</label><br>
+
+
+                    <input type="password" id="password" placeholder="Password">
+                    <i class="fa fa-lock icon fa-lg"></i>
+
+                    <br><br>
+                    <br>
+                    <button>Login</button>
+                    <br><br>
+                    <br><br>
+
+                    <label for="newUser" id="subs"> 
+                Don't have an account?</label>
+                    <a class="cad" href="register.html">Register Now</a>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+    <script src="../js/mobile-navbar.js"></script>
+</body>
+
+</html>

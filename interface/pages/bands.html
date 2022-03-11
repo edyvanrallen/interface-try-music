@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <link rel="shortcut icon" type="imagex/png" href="../_imagens/connectdevelop.png">
+    <link rel="stylesheet" href="../css/bands-screen.css">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My Bands</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://kit.fontawesome.com/25cbd42782.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../services/getBands.js"></script>
+
+    <body onload="getBandas()">
+        <header>
+            <nav>
+                <a class="logo" href="#"><i class="fab fa-connectdevelop"></i>
+                trymusic
+            </a>
+                <ul class="nav-list">
+                    <li class="a"><i class="far fa-user-circle" href="../js/popup.js"></i></li>
+                </ul>
+            </nav>
+        </header>
+        <script src="../services/createBands.js"></script>
+        <button class="butto" onclick="showModal()">Create</button>
+        <a href="join-to-band.html"><button class="butto">Join</button></a>
+        <br>
+        <section id="main">
+        </section>
+        <div class="wrapper">
+
+            <!--Card de banda com menu melhorado-->
+            <!--
+            <div class="band">
+                <button class="click-band">
+                <label id="ShowBandName" for="">example</label>
+                    </button>
+                <br><img src="../_imagens/concerto.jpg" alt="">
+                <label id="idBand" for="">ID = </label>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa fa-ellipsis-v"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showModall()">Leave band</a>
+                    </div>
+                </div>
+            </div>
+            -->
+
+        </div>
+
+
+        <!--div para deletar banda-->
+        <div class="modall" id="modall">
+            <div class="modal-contentt">
+                <!--span (button de cancelar)-->
+                <span class="close-buttonn" onclick="closeModall()">
+                    Cancel
+                </span>
+                <p>Do you really want to leave this band?</p>
+                <br><br>
+                <input type="submit" value="Leave" id="btnn" onsubmit="">
+            </div>
+        </div>
+
+        <div id="popup-wrapper" class="popup-wrapper">
+            <div class="popup">
+                <div class="circle">
+                    <label for="" class="init-letter">E</label>
+                </div>
+                <label for="" class="name">Edy Vanrallen</label>
+                <br>
+                <lable class="email">example@gmail.com</lable>
+                <br>
+                <div class="trace"></div>
+                <button class="logout">Log out of account</button>
+            </div>
+
+        </div>
+
+
+        <!--div para inserir nome da banda-->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <!--span (button de cancelar)-->
+                <span class="close-button" onclick="closeModal()">
+                    Cancel
+                </span>
+                <br><br>
+                <label class="txt" for="">Band name*</label><br>
+                <input class="username" name="name" placeholder="Name" type="text">
+                <br><br>
+                <input type="submit" value="Create" id="btn">
+            </div>
+        </div>
+        <script src="../js/modal-del.js"></script>
+        <script src="../js/modal.js"></script>
+        <script src="../js/popup.js"></script>
+        <script src="../js/popup-del.js"></script>
+
+    </body>
+
+</html>

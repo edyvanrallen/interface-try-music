@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="imagex/png" href="../_imagens/connectdevelop.png">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" type="imagex/png" href="./interface/_imagens/connectdevelop.png" />
+    <script src="mobile-navbar.js"></script>
+    <script src="https://kit.fontawesome.com/0ed2116c63.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/events.js"></script>
+    <title>TryMusic Official</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="mural.html"><i class="fab fa-connectdevelop"></i> TryMusic</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="mural.html">Home</a></li>
+                <li><a href="./bands.html">Bands</a></li>
+                <li class="a"><button><i class="far fa-user-circle" href="../js/popup.js"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="top-block">
+        <h1 class="titulo-principal">TryMusic Events</h1>
+    </div>
+    <div class="block-above">
+        <h3 class="pre-title">TryMusic Live</h3>
+        <h1 class="title-ba">The Beatles</h1>
+
+
+        <!--button de criação de eventos-->
+        <ul class="botton-end">
+            <button class="butt" onclick="showModal()">Create Event</button>
+        </ul>
+
+        <!--------------------modal para preencher formulario de criação de evento---------------->
+        <div class="modal" id="modal">
+            <div class="modal-content" id="modal-content">
+                <form onsubmit="post()">
+                    <div id="stilo">
+                        <select id="selection" class="type">
+                            <option id="">-Select-</option>
+                            <option id="presentation">Apresentation</option>
+                            <option id="meeting">Meeting</option>
+                            <option id="rehearsal">Rehearsal</option>
+                            <option id="nulo">-None-</option>
+                        </select>
+                        <br>
+
+                        <label id="txt">Event name</label><br>
+                        <input type="text" id="nameEv" name="event-name" placeholder=""><br>
+
+                        <div class="event-date-time">
+                            <label id="txt">Event date</label><br>
+                            <input type="date" id="dateEv" name="event-date" placeholder="Choose your event name"><br>
+
+                            <label id="txt">Event time</label><br>
+                            <input type="time" id="timeEv" name="event-time" placeholder="Choose your event name"><br>
+                        </div>
+                        <label id="txt">Event local</label><br>
+                        <input type="text" id="placeEv" name="event-local" /><br>
+                        <label id="txt">Description of the event</label><br>
+                        <textarea name="Desc" id="desc" cols="30" rows="5" placeholder=""></textarea><br>
+                    </div>
+                    <div id="btn">
+                        <span class="close-button" onclick="closeModal()">
+                            Cancel
+                        </span>
+                        <input type="submit" value="Create" id="btn">
+                    </div>
+            </div>
+            </form>
+            <br><br>
+        </div>
+    </div>
+
+    <!----------------------------------modal para editar formulario--------------------------->
+    <div class="modall" id="modall">
+        <div class="modal-content" id="modal-content">
+            <form onsubmit="post()">
+                <div id="stilo">
+                    <select id="selection" class="type">
+                        <option id="">-Select-</option>
+                        <option id="presentation">Apresentation</option>
+                        <option id="meeting">Meeting</option>
+                        <option id="rehearsal">Rehearsal</option>
+                        <option id="nulo">-None-</option>
+                    </select>
+
+                    <br>
+
+                    <label id="txt">Event name</label><br>
+                    <input type="text" id="nameEv" name="event-name" placeholder=""><br>
+
+                    <div class="event-date-time">
+                        <label id="txt">Event date</label><br>
+                        <input type="date" id="dateEv" name="event-date" placeholder="Choose your event name"><br>
+
+                        <label id="txt">Event time</label><br>
+                        <input type="time" id="timeEv" name="event-time" placeholder="Choose your event name"><br>
+                    </div>
+                    <label id="txt">Event local</label><br>
+                    <input type="text" id="placeEv" name="event-local" /><br>
+                    <label id="txt">Description of the event</label><br>
+                    <textarea name="Desc" id="desc" cols="30" rows="5" placeholder=""></textarea><br>
+                </div>
+                <div id="btn">
+                    <span class="close-button" onclick="closeModall()">
+                        Cancel
+                    </span>
+                    <input type="submit" value="Save" id="btn">
+                    <button class="dell"><i class="fa fa-trash"></i></button>
+                </div>
+        </div>
+        </form>
+        <br><br>
+    </div>
+
+    <!-----------------------------------Cards de Evento--------------------------------------------->
+    <div class="bottom-block">
+        <div class="limit"></div>
+        <div class="limit"></div>
+        <div class="content first-bottom-block">
+            <h1 class="title-fdb">Apresentation</h1>
+            <h2>JavaScript<br>Fundamentals</h2>
+            <h3>A dynamic language popular for web devlopment, big data science and scripting</h3>
+            <p><i class="fa fa-calendar"></i>Jan 22-24&nbsp;<i class="fa fa-clock"></i>10:30 am MDT</p>
+            <p>Information & Cyber Security</p>
+            <p><i class="fa fa-map"></i>Americas</p>
+            <button onclick="showModall()" class="button-cards-one" href="../js/popup-cards.js"><i
+                    class="fa fa-pencil"></i> Edit</button>
+        </div>
+        <div class="limit"></div>
+        <div class="limit"></div>
+    </div>
+
+    <!------------------------Popup de Usuario-------------------------->
+    <div id="popup-wrapper" class="popup-wrapper">
+        <div class="popup">
+            <div class="circle">
+                <label for="" class="init-letter">E</label>
+            </div>
+            <label for="" class="name">Edy Vanrallen</label>
+            <br>
+            <lable class="email">example@gmail.com</lable>
+            <br>
+            <div class="trace"></div>
+            <button class="logout">Log out of account</button>
+        </div>
+    </div>
+
+    <script src="../js/modal-edit.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/popup.js"></script>
+
+
+    <script src="../js/popup.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2? family = Josefin + Sans: wght @ 100; 300; 600 & family = Aberto + Sans: wght @ 300; 400; 700 & family = Titillium + Web: wght @ 200 & display = swap ');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background: rgb(37, 36, 36);
+    height: 8vh;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+div {
+    background-color: #323232;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    min-width: 450px;
+    width: 60%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.tt {
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    font-size: 25px;
+}
+
+.subtt {
+    position: absolute;
+    top: 50px;
+    left: 45px;
+    font-size: 15px;
+}
+
+.tf {
+    position: absolute;
+    top: 100px;
+    left: 45px;
+    font-size: 17px
+}
+
+input {
+    position: absolute;
+    top: 122px;
+    left: 45px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 250;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+label {
+    color: white;
+    position: absolute;
+    left: 70px;
+}
+
+.fa-xmark::before {
+    color: #fff;
+}
+
+button {
+    background-color: #F4511E;
+    border: 0.5px solid #FFFFFF;
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+    width: 100px;
+}
+
+button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.more {
+    position: absolute;
+    top: 440px;
+    height: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00000000;
+}
+
+.tutorial {
+    position: absolute;
+    top: -15px;
+    left: 60px;
+    font-size: 20px;
+}
+
+#steps {
+    font-size: 15px;
+}
